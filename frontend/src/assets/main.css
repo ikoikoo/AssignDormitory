@@ -1,0 +1,156 @@
+/* src/assets/main.css */
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eef2f7; /* 淡色背景 */
+  color: #333;
+  line-height: 1.6;
+}
+
+#app {
+  /* App.vue 中已经有 #app-container 处理布局 */
+}
+
+/* 可以定义一些通用的按钮、链接样式 */
+.button-primary {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #0056b3;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 可以在这里添加 MbtiForm.vue 中使用的通用页面样式类 */
+.page-container {
+  padding: 20px;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.page-header h1 {
+  margin: 0;
+  color: #333;
+}
+.back-link {
+  padding: 8px 12px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.back-link:hover {
+  background-color: #5a6268;
+}
+.content-area {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.submit-button:hover {
+  background-color: #218838;
+}
+
+/* 问卷相关通用样式 */
+.question {
+  margin-bottom: 20px;
+}
+.question label:first-child {
+  /* 问题本身的 label */
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.question div {
+  /* 选项容器 */
+  margin-bottom: 8px;
+}
+.question input[type='radio'],
+.question input[type='checkbox'] {
+  margin-right: 8px;
+  vertical-align: middle; /* 对齐 */
+}
+.question label {
+  /* 选项的 label */
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+/* 个人信息表单通用样式 */
+.profile-form div {
+  margin-bottom: 15px;
+}
+.profile-form label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.profile-form span {
+  color: #555;
+}
+.profile-form input[type='text'],
+.profile-form input[type='email'],
+.profile-form input[type='tel'],
+.profile-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+/* 公告列表样式 */
+.announcement-list {
+  list-style: none;
+  padding: 0;
+}
+.announcement-list li {
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #17a2b8;
+  border-radius: 4px;
+}
+.announcement-list li strong {
+  color: #17a2b8;
+  margin-right: 10px;
+}
