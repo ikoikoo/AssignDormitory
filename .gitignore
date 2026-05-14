@@ -1,0 +1,24 @@
+# Maven
+backend/target/
+
+# Node
+frontend/node_modules/
+my-student-protal/src/
+
+# 临时数据文件
+backend/temp_data/*.csv
+backend/temp_data/*.json
+
+# 本地配置（含密码，不提交）
+backend/src/main/resources/application-local.properties
+frontend/.env.local
+frontend/.env.*.local
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

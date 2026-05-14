@@ -33,14 +33,13 @@ public class DormManagementService {
     @Autowired private DormHabitsResultRepository dormHabitsResultRepository;
     @Autowired private DormAssignmentRepository dormAssignmentRepository;
 
-    // --- 从配置文件读取 Python 脚本路径和临时文件目录 ---
-    @Value("C:/Users/TSORa/PycharmProjects/PythonProject/3.1/dorm_assignment.py")
+    @Value("${app.python.script.path}")
     private String pythonScriptPath;
 
-    @Value("C:/Python312/python.exe")
+    @Value("${app.python.interpreter.path}")
     private String pythonInterpreterPath;
 
-    @Value("D:/Desktop/test3.1.0/backend/temp_data")
+    @Value("${app.data.temp.dir}")
     private String tempDir;
 
     @PostConstruct

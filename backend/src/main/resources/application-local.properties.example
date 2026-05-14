@@ -1,0 +1,17 @@
+# 复制此文件为 application-local.properties，按本机情况填写
+# application-local.properties 已被 .gitignore 排除，不会提交到 git
+
+spring.datasource.username=root
+spring.datasource.password=your_mysql_password
+
+app.jwt.secret=your_random_secret_at_least_64_chars
+
+# Windows 示例
+app.python.interpreter.path=C:/Python312/python.exe
+app.python.script.path=C:/path/to/dorm_assignment.py
+app.data.temp.dir=D:/path/to/temp_data
+
+# Mac/Linux 示例
+# app.python.interpreter.path=python3
+# app.python.script.path=/path/to/dorm_assignment.py
+# app.data.temp.dir=/tmp/dorm_temp
