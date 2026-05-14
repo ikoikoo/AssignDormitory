@@ -1,6 +1,32 @@
-# 宿舍分配系统
+# 🎓宿舍分配系统 (Dormitory Assignment System)
 
 基于 Spring Boot + Vue 3 + Python K-Means 的智能宿舍分配系统。
+本项目旨在解决高校宿舍分配中因学生性格（MBTI）、生活习惯差异导致的人际冲突。通过构建一个全栈管理系统，利用 K-Means 聚类算法 实现人群画像的精准匹配，并结合 Dijkstra 贪心策略 优化物理空间的分配逻辑。
+
+## 📌核心功能
+
+### 多维数据采集：基于 Vue3 开发的响应式问卷，涵盖 MBTI 性格测试、作息时间、卫生习惯及社交偏好。
+
+### 智能化分配算法
+
+ - 特征工程：应用 One-Hot 编码处理定性数据。
+ - 聚类分析：利用 Python (Scikit-learn) 实现 K-Means 模型，并通过肘部法则动态调优。
+ - 路径优化：引入 Dijkstra 思想进行宿舍物理位置的贪心匹配。
+
+### 全栈架构实现
+
+ - 前端：Vue 3 + Element Plus + Axios。
+ - 后端：Spring Boot 框架提供 RESTful API 支持。
+ - 计算层：Java 异步调用 Python 脚本实现跨语言算法集成。
+ - 数据库：MySQL 实现 6 张核心业务表的数据闭环。
+
+## 🛠️ 技术架构
+
+graph LR
+  A[Vue3 前端] -- JSON --> B[SpringBoot 后端]
+  B -- 数据存储 --> C[(MySQL)]
+  B -- 异步驱动 --> D[Python 算法引擎]
+  D -- 聚类结果 --> B
 
 ## 环境要求
 
@@ -10,7 +36,7 @@
 - MySQL 8.0+
 - Python 3.10+（需安装依赖：`pip install -r backend/scripts/requirements.txt`）
 
-## 快速开始
+## 🚀快速开始
 
 ### 1. 数据库
 
@@ -59,7 +85,7 @@ npm run dev
 
 前端运行在 `http://localhost:5173`（Vite 默认端口）。
 
-## 项目结构
+## 📂项目结构
 
 ```
 ├── backend/                  Spring Boot 后端
@@ -73,7 +99,7 @@ npm run dev
 └── frontend/                 Vue 3 前端
 ```
 
-## 环境变量（可选）
+## 💡环境变量（可选）
 
 也可以通过环境变量覆盖配置，无需 `application-local.properties`：
 
@@ -85,3 +111,6 @@ npm run dev
 | `PYTHON_PATH` | Python 解释器路径 | `python` |
 | `PYTHON_SCRIPT_PATH` | 分配脚本路径 | `scripts/dorm_assignment.py` |
 | `TEMP_DATA_DIR` | 临时文件目录 | `temp_data` |
+
+
+ 
