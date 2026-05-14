@@ -20,15 +20,7 @@
  - 计算层：Java 异步调用 Python 脚本实现跨语言算法集成。
  - 数据库：MySQL 实现 6 张核心业务表的数据闭环。
 
-## 🛠️ 技术架构
-
-graph LR
-  A[Vue3 前端] -- JSON --> B[SpringBoot 后端]
-  B -- 数据存储 --> C[(MySQL)]
-  B -- 异步驱动 --> D[Python 算法引擎]
-  D -- 聚类结果 --> B
-
-## 环境要求
+## 🛠️环境要求
 
 - JDK 21+
 - Maven 3.9+（或使用项目自带的 `mvnw`）
